@@ -3617,6 +3617,9 @@ class FormHelperTest extends CakeTestCase {
 		$result = $this->Form->radio('Model.field', array('1' => 'Yes', '0' => 'No'), array('value' => 0));
 		$this->assertTags($result, $expected);
 
+		$result = $this->Form->radio('Model.field', array('1' => 'Yes', '0' => 'No'), array('value' => false));
+		$this->assertTags($result, $expected);
+
 		$expected = array(
 			'fieldset' => array(),
 			'legend' => array(),
